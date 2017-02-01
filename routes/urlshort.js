@@ -7,7 +7,7 @@ var db = new nedb({filename: './data/urls', autoload: true});
 
 var urlshortRouter = express.Router();
 
-var URI = 'http://code-master5.herokuapp.com';
+var URI = 'http://code-master5.herokuapp.com/api/urlshortener/';
 
 function inputHandler(request, response) {
     var addUrl = request.params.Uid.split('.');
