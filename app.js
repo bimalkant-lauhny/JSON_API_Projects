@@ -9,7 +9,7 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var timestampRouter = require('./routes/timestamp');
 var whoAmI_Router = require('./routes/whoami');
-
+var urlshortRouter = require('./routes/urlshort');
 var app = express();
 
 // view engine setup
@@ -34,6 +34,9 @@ app.use('/api/timestamp', timestampRouter);
 
 //request-header parser
 app.use('/api/whoami', whoAmI_Router);
+
+//URL-Shortener
+app.use('/api/urlshortener/', urlshortRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

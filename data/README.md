@@ -1,2 +1,2 @@
-Offline databases for APIs are stored here.
+Offline databases for APIs and related operation interface are stored here.
 NeDB is used.
