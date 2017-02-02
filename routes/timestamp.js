@@ -30,7 +30,6 @@ timestampRouter.route('/:timestamp')
         }
 
     } catch (err1) {
-        console.log(err1);
         try {
             
             var unixTime = Number(timeStamp);
