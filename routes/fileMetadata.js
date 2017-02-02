@@ -5,7 +5,7 @@ const fs = require('fs');
 const assert = require('assert');
 
 const multer = require('multer');
-var upload = multer({dest: '../uploads/'});
+var upload = multer({dest: './uploads/'});
 
 var filemetadataRouter = express.Router();
 
@@ -19,8 +19,8 @@ filemetadataRouter.route('/get-size')
     response.json({
         'size': request.file.size
     });
-        
-    fs.unlink('../uploads/' + request.file.filename, function (err, result) {
+    
+    fs.unlink('./uploads/' + request.file.filename, function (err, result) {
         assert.equal(null, err);
     });
 });

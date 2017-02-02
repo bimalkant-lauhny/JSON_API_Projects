@@ -9,6 +9,18 @@ var urlshortRouter = express.Router();
 
 var URI = 'http://code-master5.herokuapp.com/api/urlshortener/';
 
+db.find({}, function (err, result) {
+    if (result.length === 0){
+        db.insert({
+            'index': 1,
+            'url': 'http://freecodecamp.com'
+        }, function (err, result) {
+            assert.equal(null, err); 
+            console.log('Successfully initialized database!');
+        });        
+    }
+});
+
 function inputHandler(request, response) {
     var addUrl = request.params.Uid.split('.');
     try {
@@ -37,7 +49,7 @@ function inputHandler(request, response) {
                         console.log('Successfully Inserted Doc!');
                         response.json({
                             'url': insDoc.url,
-                            'shortenedUrl': URI + '/' + insDoc.index
+                            'shortenedUrl': URI + insDoc.index
                         });
                     });  
                    
@@ -46,7 +58,7 @@ function inputHandler(request, response) {
             } else {
                 response.json({
                     'url': 'http://' + request.params.Uid,
-                    'shortenedUrl': URI + '/' + result.index
+                    'shortenedUrl': URI + result.index
                 });
             }
         });
