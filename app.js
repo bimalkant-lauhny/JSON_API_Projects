@@ -10,6 +10,8 @@ var users = require('./routes/users');
 var timestampRouter = require('./routes/timestamp');
 var whoAmI_Router = require('./routes/whoami');
 var urlshortRouter = require('./routes/urlshort');
+var imageAbsRouter = require('./routes/imageAbstraction');
+
 var app = express();
 
 // view engine setup
@@ -37,6 +39,9 @@ app.use('/api/whoami', whoAmI_Router);
 
 //URL-Shortener
 app.use('/api/urlshortener/', urlshortRouter);
+
+//Image search router
+app.use('/api/imagesearch/', imageAbsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
