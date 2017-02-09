@@ -5,11 +5,15 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 
+//APIs
 var timestampRouter = require('./routes/timestamp');
 var whoAmI_Router = require('./routes/whoami');
 var urlshortRouter = require('./routes/urlshort');
 var imageAbsRouter = require('./routes/imageAbstraction');
 var filemetadataRouter = require('./routes/fileMetadata');
+
+//Projects
+var drumKitRouter = require('./routes/drumKitRouter');
 
 var app = express();
 
@@ -28,6 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 
+//APIs
 // timestamp microservice
 app.use('/api/timestamp', timestampRouter);
 
@@ -42,6 +47,10 @@ app.use('/api/imagesearch/', imageAbsRouter);
 
 //File metadata
 app.use('/api/filemetadata/', filemetadataRouter);
+
+//Projects
+//Drum Kit
+app.use('/projects', drumKitRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
