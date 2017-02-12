@@ -105,8 +105,8 @@ nav {
     min-width: 100%;
     max-width: 100%;
     text-align: center;
-    margin: auto;
-    padding: 20px;
+    margin: 20px 0;
+    padding: 0;
 }
 
 .top-links a:hover {
@@ -233,8 +233,8 @@ nav {
     .responsive-expand {
         display: none; 
     }
-   
-    .top-links {
+    
+    .creator, .top-links {
         display: block;
     }
     
@@ -249,7 +249,7 @@ nav {
         max-height: 80px;
         min-width: 20%;
         max-width: 20%;
-        margin: 0 auto;
+        margin: 0 30px;
         line-height: 80px; 
     }
     
@@ -315,4 +315,13 @@ footer {
 
 .contact-icons img:hover {
     transform: scale(1.5);
+}
+
+@media screen and (max-width: 350px) {
+    .intro1, .intro2, .name, .pro-head {
+        font-size: 20px;
+    }
+    .foot-code {
+        font-size: 12px;
+    }
 }
