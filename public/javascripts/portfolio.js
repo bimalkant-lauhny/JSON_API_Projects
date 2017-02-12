@@ -1,7 +1,7 @@
 window.onload = function () {
     
-    var trigram = "/icons/menu.svg";
-    var cross = "/icons/cross-symbol.svg";
+    var trigram = "/icons/trigram.png";
+    var cross = "/icons/cross.png";
     
     var topLinks = document.getElementsByClassName('top-links')[0];
     var nav = document.getElementsByTagName('nav')[0];
@@ -13,12 +13,12 @@ window.onload = function () {
         
         if (topLinks.style.display === "none") {
             topLinks.style.display = "inline-block";
-            respImg.style.url = cross; 
+            respImg.src = cross; 
             nav.style.height = "auto"
             me.style.display = "none"
         } else {
             topLinks.style.display = "none";
-            respImg.style.url = trigram;
+            respImg.src = trigram;
             nav.style.height = "80px";
             me.style.display = "block"
         }

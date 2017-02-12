@@ -1,3 +1,7 @@
+.icon-cross:before {
+  content: "\ea0f";
+}
+
 @font-face {
     font-family: "lulo-clean";
     src: url("../fonts/lulo-clean.ttf");
@@ -82,14 +86,18 @@ nav {
     font-family: "lulo-bold";
 }
 
+#resp-img {
+    height: 30px;
+    width: 30px;
+    color: #FFFFFF;
+    margin: 25px auto;
+}
+
 .responsive-expand {
-    color: #FFFFFF; 
-    text-align: center;
-    font-size: 48px;
     float: right;
     width: 80px;
     height: 80px;
-    line-height: 70px;
+    text-align: center;
 }
 
 .top-links{
