@@ -1,6 +1,6 @@
 window.onload = function () {
     
-    var trigram = "&#9776;";
+    var trigram = "☰";
     var cross = "&#10005;";
     
     var topLinks = document.getElementsByClassName('top-links')[0];
