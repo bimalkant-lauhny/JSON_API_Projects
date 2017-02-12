@@ -1,13 +1,14 @@
+var trigram = "/icons/trigram.png";
+var cross = "/icons/cross.png";
+
+var topLinks = document.getElementsByClassName('top-links')[0];
+var nav = document.getElementsByTagName('nav')[0];
+var responsiveIco = document.getElementsByClassName('responsive-expand')[0];
+var me = document.getElementsByClassName('creator')[0];
+var respImg = document.getElementById('resp-img');
+var menuLi = document.querySelectorAll('.top-links li');
+
 window.onload = function () {
-    
-    var trigram = "/icons/trigram.png";
-    var cross = "/icons/cross.png";
-    
-    var topLinks = document.getElementsByClassName('top-links')[0];
-    var nav = document.getElementsByTagName('nav')[0];
-    var responsiveIco = document.getElementsByClassName('responsive-expand')[0];
-    var me = document.getElementsByClassName('creator')[0];
-    var respImg = document.getElementById('resp-img');
     
     responsiveIco.addEventListener('click', function () {
         
@@ -24,7 +25,17 @@ window.onload = function () {
         }
     });
     
-    if (window.matchMedia("screen and (min-width: 790px)").matches) {
-       me.style.display = "block";
-    }
+    
 };
+
+/*
+window.matchMedia("screen and (min-width: 790px)").addListener(function() {
+    console.log("It's working!");
+    respImg.src = trigram;
+    me.style.display = "block";
+    topLinks.style.display = "block";
+    for (li of menuLi) {
+        li.style.display = "inline";
+    }
+});
+*/
