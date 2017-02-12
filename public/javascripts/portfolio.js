@@ -1,7 +1,7 @@
 window.onload = function () {
     
-    var trigram = "☰";
-    var cross = "&#10005;";
+    var trigram = "&#x2623;";
+    var cross = "&#x2692;";
     
     var topLinks = document.getElementsByClassName('top-links')[0];
     var nav = document.getElementsByTagName('nav')[0];
