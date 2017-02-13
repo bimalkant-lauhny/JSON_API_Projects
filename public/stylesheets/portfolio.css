@@ -1,7 +1,3 @@
-.icon-cross:before {
-  content: "\ea0f";
-}
-
 @font-face {
     font-family: "lulo-clean";
     src: url("../fonts/lulo-clean.ttf");
@@ -44,11 +40,13 @@ a:hover {
 
 ul {
    list-style-type: none; 
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
 }
 
 nav {
     background: #333B50; 
-    height: 80px;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -76,51 +74,40 @@ nav {
     -moz-flex-wrap: wrap;
 }
 
-.creator {
-    float: left;
-    width: 150px;
-    height: 50px;
-    text-align: center;
-    padding: 20px 0 10px 0;
-    font-family: "lulo-bold";
+ul.topnav {
+    display: none;
+    width: 100%;
 }
 
-#resp-img {
+ul.topnav li {
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.resp-img {
     height: 30px;
     width: 30px;
-    color: #FFFFFF;
-    margin: 25px auto;
+    padding: 9px
 }
 
-.responsive-expand {
+.me {
+    height: 40px;
+    width: 120px;
+    float: left;
+    text-align: center;
+    margin: 20px 20px;
+}
+
+.resp-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
     float: right;
-    width: 80px;
-    height: 80px;
+    height: 48px;
+    width: 48px;
+    margin: 16px 16px;
     text-align: center;
-    display: block;
-}
-
-.top-links{
-    height: auto;
-    display: none;
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
-}
-
-.top-links li {
-    display: block;
-    min-height: 30px;
-    max-height: 30px;
-    min-width: 100%;
-    max-width: 100%;
-    text-align: center;
-    margin: 20px 0;
-    padding: 0;
-}
-
-.top-links a:hover {
-   color: #00D646; 
 }
 
 .highlight {
@@ -214,6 +201,7 @@ nav {
     font-family: "lulo-clean";
     color: #00D646; 
 }
+
 .pro-lang, .pro-web-tech, .pro-others {
     padding: 20px;
     width: 250px;
@@ -227,8 +215,6 @@ nav {
     height: auto;
 }
 
-
-
 @media screen and (min-width: 980px) {
     .fluid-container {
         margin: 0 auto;
@@ -239,39 +225,24 @@ nav {
     }
 }
 
-@media screen and (min-width: 790px) {
-    
-    .responsive-expand {
-        display: none; 
-    }
-    
-    nav {
-        height: 80px;
-    }
-        
-    .top-links {
-        display: none;
-    }
-
-    .creator, .top-links {
-        display: block;
-    }
-    
-    .top-links li {
-        display: inline;
-        font-size: 12px;
-        margin: 0 auto;
-    }
-    
-    .top-links a {
-        min-height: 80px;
-        max-height: 80px;
-        min-width: 20%;
-        max-width: 20%;
-        margin: 0 30px;
-        line-height: 80px; 
-    }
-    
+@media screen and (min-width: 800px) {
+   .resp-icon {
+       display: none;
+   } 
+   
+   ul.topnav {
+       display: inline !important;
+   }
+   
+   ul.topnav li {
+       display: inline;
+       margin: 0 20px;
+   }
+   
+   ul.topnav li a {
+       text-align: center;
+       line-height: 80px;
+   }
 }
 
 @media screen and (min-width: 550px) {
@@ -336,7 +307,7 @@ footer {
     transform: scale(1.5);
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 400px) {
     .intro1, .intro2, .name, .pro-head {
         font-size: 20px;
     }
