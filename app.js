@@ -14,6 +14,7 @@ var filemetadataRouter = require('./routes/fileMetadata');
 
 //Projects
 var drumKitRouter = require('./routes/drumKitRouter');
+var weatherRouter = require('./routes/weatherRouter');
 
 var app = express();
 
@@ -51,6 +52,9 @@ app.use('/api/filemetadata/', filemetadataRouter);
 //Projects
 //Drum Kit
 app.use('/projects', drumKitRouter);
+
+//Weather Info
+app.use('/projects', weatherRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
